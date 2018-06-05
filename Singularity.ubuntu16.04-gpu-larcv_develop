@@ -43,6 +43,8 @@ Version ubuntu16.04-root06.08.06-gpu-larcv2
     export PYTHONPATH=${LARCV_BASEDIR}/python:${PYTHONPATH}
 
 %post
+    # make lqcd filesystem mount points
+    mkdir /scratch /data /project /lqcdproj
     # ROOT    
     export ROOTSYS=/usr/local/root
     export PATH=${ROOTSYS}/bin:${PATH}
